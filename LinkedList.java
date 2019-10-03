@@ -32,17 +32,36 @@ public class LinkedList{
   public ListElement deleteElement(int index)
   {
 
+      if(index ==0)
+      {
+         this.head = this.head.next;
+      }
+      else
+      {
+        ListElement temp= head;
+        ListElement temp1= null;
+
+        for(int i=0; i<index-1; i++)
+        {
+          temp = temp.next;
+        }
+        temp1 = temp.next;
+        temp.next = temp1.next;
+        //System.out.println(temp1.data);
+
+      }
   }
 
   public void printLinkedListHead()
   {
       ListElement temp = this.head;
-
+      temp.data =data;
       while(temp.next!=null)
       {
-        System.printout.ln(temp.data);
+        System.out.println(temp.data);
         temp= temp.next;
       }
+      System.out.println(temp.data);
   }
 
 
