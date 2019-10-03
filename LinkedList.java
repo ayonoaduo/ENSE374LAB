@@ -26,7 +26,19 @@ public class LinkedList{
   }
   public ListElement getElement(int index)
   {
-
+      if (index==0)
+      {
+         System.out.println(head.data);
+      }
+      else
+      {
+          ListElement temp=head;
+          for(int i=0; i < index-1; i++)
+          {
+            temp = temp.next;
+          }
+          System.out.println(temp.data);
+      }
   }
 
   public ListElement deleteElement(int index)
