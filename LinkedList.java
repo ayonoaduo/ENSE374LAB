@@ -36,7 +36,13 @@ public class LinkedList{
 
   public void printLinkedListHead()
   {
+      ListElement temp = this.head;
 
+      while(temp.next!=null)
+      {
+        System.printout.ln(temp.data);
+        temp= temp.next;
+      }
   }
 
 
