@@ -4,14 +4,23 @@ public class LinkedList{
 
   public LinkedList()
   {
-    head == null;
+    this.head == null;
   }
   public void addElement(ListElement le)
   {
-    le.setNext(head);
-    if(head!=null)
+    le.next=null;
+    if(this.head==null)
     {
-      head = le;
+      this.head = le;
+    }
+    else{
+      ListElement temp= this.head;
+      while(temp.next!=null)
+      {
+         temp = temp.next;
+      }
+      temp.next=le;
+
     }
 
   }
