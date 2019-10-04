@@ -18,12 +18,12 @@ public class ListElement {
   {
     return this.data;
   }
-  /*public void setNext(ListElement next)
+  public void setNext(ListElement next)
   {
     this.next=next;
   }
   public ListElement getNext()
   {
     return this.next;
-  }*/
+  }
 }
