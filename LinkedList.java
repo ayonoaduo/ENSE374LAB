@@ -3,7 +3,7 @@
 public class LinkedList{
 
   private ListElement head=null;
-  private ListElement prev=null;
+//  private ListElement prev=null;
 
   //Function to add elements to Linked list
   public void addElement(ListElement le)
