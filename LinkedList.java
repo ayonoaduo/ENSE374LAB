@@ -1,13 +1,15 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class LinkedList{
 
   private ListElement head=null;
+  private ListElement prev=null;
 
   //Function to add elements to Linked list
   public void addElement(ListElement le)
   {
     ListElement temp = head;
+
     if(head==null)
     {
       head = le;
