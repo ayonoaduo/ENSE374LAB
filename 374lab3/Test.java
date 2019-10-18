@@ -43,12 +43,29 @@ public class Test{
             Savings savingAcct();
           }
       }
-      
+
       else//if Checking was inputed from first question
       {
         System.out.println("Creating a Checking Account...");
         Checking checkingAcct();
       }
+
+
+      //Phase 3
+      double balance1= 2000;
+      Savings savingTest= new Savings(balance1);//initializing account with 2000
+
+      double newRate= 0.04;
+      savingTest.modifyAnnualInterestRate(newRate);//sets interest rate
+
+      double compoundingVal= 500;
+      double monthlyBalance = savingTest.calcMonthlyInterest(compoundingVal);//calculates total monthly compounding int for 500
+      System.out.println("The new balance with monthly interest is " + monthlyBalance);
+
+      double biWeeklyBalance= savingTest.calcBiWeeklyInterest(compoundingVal);//calculates total biweekly compounding int for 500
+      System.out.println("The new balance with biweekly interest is " + biWeeklyBalance);
+
   }
+
 
 }
