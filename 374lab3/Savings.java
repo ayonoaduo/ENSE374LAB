@@ -27,25 +27,25 @@ public class Savings{
     return (savingsBalance + deposit);
   }
 
-  public double withdraw(deposit withdraw)
+  public double withdraw(double withdraw)
   {
     return (savingsBalance - withdraw);
   }
 
-  public double calcMonthlyInterest()
+  public double calcMonthlyInterest(double compoundingVal)
   {
     double monthint= annualInterestRate / 12;
-    double monthIntBalance= savingsBalance * monthint;
-    savingsBalance= savingsBalance - monthIntBalance;
+    double monthIntBalance= compoundingVal * monthint;
+    savingsBalance= savingsBalance + monthIntBalance;
     return savingsBalance;
   }
 
-  public double calcBiWeeklyInterest()
+  public double calcBiWeeklyInterest(double compoundingVal)
   {
 		double interest= (1 + annualInterestRate/26);
 		double result = (Math.pow(interest, 26))-1;
-		double bal = savingsBalance * result;
-		savingsBalance = savingsBalance - bal;
+		double bal = compoundingVal * result;
+		savingsBalance = savingsBalance + bal;
 
 		return savingsBalance;
 	}
