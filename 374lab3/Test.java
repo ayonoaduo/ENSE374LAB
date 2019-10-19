@@ -25,14 +25,14 @@ public class Test{
             if (fveThsndOrMore==1)//Create money market if 5000 or more is to be deposited
             {
               System.out.println("Creating a Money Market Account...");
-              MoneyMkt moneyMktAcct();
+              //MoneyMkt moneyMktAcct();
             }
 
             else//Create savings if less than 5000 to be deposited
             {
               System.out.print("A money market account has to have at least $5000");
               System.out.print("Therefore creating a Savings Account(no debit card)...");
-              Savings savingAcct();
+              //Savings savingAcct();
             }
 
           }
@@ -40,14 +40,14 @@ public class Test{
           else//Create savings account if not debit card
           {
             System.out.println("Creating a Savings Account...");
-            Savings savingAcct();
+            //Savings savingAcct();
           }
       }
 
       else//if Checking was inputed from first question
       {
         System.out.println("Creating a Checking Account...");
-        Checking checkingAcct();
+        //Checking checkingAcct();
       }
 
 

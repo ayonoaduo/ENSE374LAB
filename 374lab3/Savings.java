@@ -4,22 +4,22 @@ public class Savings{
 
   public static void modifyAnnualInterestRate(double newRate)
   {
-    annualInterestRate = newRate;
+    this.annualInterestRate = newRate;
   }
 
   Savings(double balance)
   {
-    savingsBalance = balance;
+    this.savingsBalance = balance;
   }
 
-  double getAnnInt()
+  public double getAnnInt()
   {
-    return annualInterestRate;
+    return this.annualInterestRate;
   }
 
-  double getSavBal()
+  public double getSavBal()
   {
-    return savingsBalance;
+    return this.savingsBalance;
   }
 
   public double deposit(double deposit)
