@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>270</y>
+      <w>310</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Checking
+--
+-checkingBalance: Double
+-annualInterestRate: Double
+-maintfee: Double
+--
++ModifyAnnualInterestRate(double: newRate)
++Checking()
++Checking(double: balance)
++GetAnnInt():Double
++GetCheckBal():Double
++setMainFee(double maintenancefee): Void
++MaintFee()
++Deposit(double: deposit):Double
++Withdraw(double: withdraw):Double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>10</y>
+      <w>370</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Savings
+--
+-savingsBalance: Double
+-annualInterestRate: Double
+--
++ModifyAnnualInterestRate(double: newRate)
++Savings()
++Savings(double: balance)
++GetAnnInt():Double
++GetSavBal():Double
++Deposit(double: deposit):Double
++Withdraw(double: withdraw):Double
++CalcMonthlyInterest(double: compoundingVal):Double
++CalcBiWeeklyInterest(double: compoundingVal):Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>540</y>
+      <w>370</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>MoneyMkt
+--
+-moneymktBalance: Double
+-annualInterestRate: Double
+-maintfee: Double
+--
++ModifyAnnualInterestRate(double: newRate)
++MoneyMkt()
++MoneyMkt(double: balance)
++GetAnnInt():Double
++GetMoneyMktBal():Double
++setMainFee(double maintenancefee): Void
++MaintFee()
++Deposit(double: deposit):Double
++Withdraw(double: withdraw):Double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>200</y>
+      <w>210</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Test
+--
+-balance1: Double
+-newRate: Double
+-compundingVal: Double
+-monthlyBalance: Double
+-biWeeklyBalance: Double
+-input: Scanner
+-savingsOrChecking: int
+-dbtCrdOrNot: int
+-fveThsndOrMore: int
+-moneyMktAccount: MoneyMkt
+-savingsAcct: Savings
+-checkingAcct: Checking
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>100</y>
+      <w>310</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>290.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>320</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>190.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>410</y>
+      <w>270</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>250.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
