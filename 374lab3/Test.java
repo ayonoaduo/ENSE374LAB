@@ -25,14 +25,14 @@ public class Test{
             if (fveThsndOrMore==1)//Create money market if 5000 or more is to be deposited
             {
               System.out.println("Creating a Money Market Account...");
-              //MoneyMkt moneyMktAcct();
+              MoneyMkt moneyMktAcct=new MoneyMkt();
             }
 
             else//Create savings if less than 5000 to be deposited
             {
               System.out.print("A money market account has to have at least $5000");
               System.out.print("Therefore creating a Savings Account(no debit card)...");
-              //Savings savingAcct();
+              Savings savingAcct=new Savings();
             }
 
           }
@@ -40,14 +40,14 @@ public class Test{
           else//Create savings account if not debit card
           {
             System.out.println("Creating a Savings Account...");
-            //Savings savingAcct();
+            Savings savingAcct=new Savings();
           }
       }
 
       else//if Checking was inputed from first question
       {
         System.out.println("Creating a Checking Account...");
-        //Checking checkingAcct();
+        Checking checkingAcct= new Checking();
       }
 
 
@@ -56,13 +56,13 @@ public class Test{
       Savings savingTest= new Savings(balance1);//initializing account with 2000
 
       double newRate= 0.04;
-      savingTest.modifyAnnualInterestRate(newRate);//sets interest rate
+      savingTest.ModifyAnnualInterestRate(newRate);//sets interest rate
 
       double compoundingVal= 500;
-      double monthlyBalance = savingTest.calcMonthlyInterest(compoundingVal);//calculates total monthly compounding int for 500
+      double monthlyBalance = savingTest.CalcMonthlyInterest(compoundingVal);//calculates total monthly compounding int for 500
       System.out.println("The new balance with monthly interest is " + monthlyBalance);
 
-      double biWeeklyBalance= savingTest.calcBiWeeklyInterest(compoundingVal);//calculates total biweekly compounding int for 500
+      double biWeeklyBalance= savingTest.CalcBiWeeklyInterest(compoundingVal);//calculates total biweekly compounding int for 500
       System.out.println("The new balance with biweekly interest is " + biWeeklyBalance);
 
   }

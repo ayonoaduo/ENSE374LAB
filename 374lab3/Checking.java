@@ -4,44 +4,51 @@ public class Checking{
   private double checkingBalance;//checking balance
   private double maintfee;//possible maintenance fee
 
-  public static void modifyAnnualInterestRate(double newRate)
+  public static void ModifyAnnualInterestRate(double newRate)
   {
-    this.annualInterestRate = newRate;//set rate
+    annualInterestRate = newRate;//set rate
+  }
+
+  Checking()
+  {
+    checkingBalance = 0;
+    annualInterestRate =0;
+    maintfee=0;
   }
 
   Checking(double balance)
   {
-    this.checkingBalance = balance;//set balance
+    checkingBalance = balance;//set balance
   }
 
-  Checking(double maintfee)
+  public void setMaintFee(double maintenancefee)
   {
-    this.maintfee = maintfee;// set maintenance fee
+    maintfee = maintenancefee;// set maintenance fee
   }
-  public double maintfee()
+  public double Maintfee()
   {
     return maintfee;
   }
-  public double getAnnInt()
+  public double GetAnnInt()
   {
     return annualInterestRate;//get annual int
   }
 
-  public double getCheckBal()
+  public double GetCheckBal()
   {
     return checkingBalance;//get checking balance
   }
 
-  public double deposit(double deposit)
+  public double Deposit(double deposit)
   {
-    this.checkingBalance = checkingBalance + deposit;//update balance
-    return (checkingBalance + deposit);//deposit amount
+    checkingBalance = checkingBalance + deposit;//update balance
+    return checkingBalance;//deposit amount
   }
 
-  public double withdraw(double withdraw)
+  public double Withdraw(double withdraw)
   {
-    this.checkingBalance = checkingBalance - withdraw;//update balance
-    return (checkingBalance - withdraw);//subtract withdrawal amount
+    checkingBalance = checkingBalance - withdraw;//update balance
+    return checkingBalance;//subtract withdrawal amount
   }
 
 

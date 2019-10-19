@@ -2,37 +2,43 @@ public class Savings{
   private static double annualInterestRate;
   private double savingsBalance;
 
-  public static void modifyAnnualInterestRate(double newRate)
+  public static void ModifyAnnualInterestRate(double newRate)
   {
-    this.annualInterestRate = newRate;
+    annualInterestRate = newRate;
+  }
+  
+  Savings()
+  {
+    savingsBalance = 0;
+    annualInterestRate =0;
   }
 
   Savings(double balance)
   {
-    this.savingsBalance = balance;
+    savingsBalance = balance;
   }
 
-  public double getAnnInt()
+  public double GetAnnInt()
   {
-    return this.annualInterestRate;
+    return annualInterestRate;
   }
 
-  public double getSavBal()
+  public double GetSavBal()
   {
-    return this.savingsBalance;
+    return savingsBalance;
   }
 
-  public double deposit(double deposit)
+  public double Deposit(double deposit)
   {
     return (savingsBalance + deposit);
   }
 
-  public double withdraw(double withdraw)
+  public double Withdraw(double withdraw)
   {
     return (savingsBalance - withdraw);
   }
 
-  public double calcMonthlyInterest(double compoundingVal)
+  public double CalcMonthlyInterest(double compoundingVal)
   {
     double monthint= annualInterestRate / 12;
     double monthIntBalance= compoundingVal * monthint;
@@ -40,7 +46,7 @@ public class Savings{
     return savingsBalance;
   }
 
-  public double calcBiWeeklyInterest(double compoundingVal)
+  public double CalcBiWeeklyInterest(double compoundingVal)
   {
 		double interest= (1 + annualInterestRate/26);
 		double result = (Math.pow(interest, 26))-1;
